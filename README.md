@@ -1,2 +1,2 @@
 # Jetson-Nano-Playground
-A playground of undocumented and experimental TensorFlow projects for Jetson Nano.
+A playground of undocumented and experimental projects for Jetson Nano.
