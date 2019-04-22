@@ -1,0 +1,167 @@
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/kento/Documents/Jetson-Inference-Tutorials/imagenet-example-2/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_8acfe/fast"
+/usr/bin/make -f CMakeFiles/cmTC_8acfe.dir/build.make CMakeFiles/cmTC_8acfe.dir/build
+make[1]: Entering directory '/home/kento/Documents/Jetson-Inference-Tutorials/imagenet-example-2/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_8acfe.dir/CheckSymbolExists.c.o
+/usr/bin/cc   -fPIC    -o CMakeFiles/cmTC_8acfe.dir/CheckSymbolExists.c.o   -c /home/kento/Documents/Jetson-Inference-Tutorials/imagenet-example-2/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_8acfe
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8acfe.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC     -rdynamic CMakeFiles/cmTC_8acfe.dir/CheckSymbolExists.c.o  -o cmTC_8acfe 
+CMakeFiles/cmTC_8acfe.dir/CheckSymbolExists.c.o: In function `main':
+CheckSymbolExists.c:(.text+0x14): undefined reference to `pthread_create'
+CheckSymbolExists.c:(.text+0x18): undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_8acfe.dir/build.make:97: recipe for target 'cmTC_8acfe' failed
+make[1]: *** [cmTC_8acfe] Error 1
+make[1]: Leaving directory '/home/kento/Documents/Jetson-Inference-Tutorials/imagenet-example-2/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_8acfe/fast' failed
+make: *** [cmTC_8acfe/fast] Error 2
+
+File /home/kento/Documents/Jetson-Inference-Tutorials/imagenet-example-2/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/kento/Documents/Jetson-Inference-Tutorials/imagenet-example-2/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_ac404/fast"
+/usr/bin/make -f CMakeFiles/cmTC_ac404.dir/build.make CMakeFiles/cmTC_ac404.dir/build
+make[1]: Entering directory '/home/kento/Documents/Jetson-Inference-Tutorials/imagenet-example-2/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_ac404.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_ac404.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+Linking C executable cmTC_ac404
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ac404.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_ac404.dir/CheckFunctionExists.c.o  -o cmTC_ac404 -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_ac404.dir/build.make:97: recipe for target 'cmTC_ac404' failed
+make[1]: *** [cmTC_ac404] Error 1
+make[1]: Leaving directory '/home/kento/Documents/Jetson-Inference-Tutorials/imagenet-example-2/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_ac404/fast' failed
+make: *** [cmTC_ac404/fast] Error 2
+
+
+Determining if the Q_WS_WIN exist failed with the following output:
+Change Dir: /home/kento/Documents/Jetson-Inference-Tutorials/imagenet-example-2/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_76172/fast"
+/usr/bin/make -f CMakeFiles/cmTC_76172.dir/build.make CMakeFiles/cmTC_76172.dir/build
+make[1]: Entering directory '/home/kento/Documents/Jetson-Inference-Tutorials/imagenet-example-2/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_76172.dir/CheckSymbolExists.cxx.o
+/usr/bin/c++   -I/usr/include/qt4   -o CMakeFiles/cmTC_76172.dir/CheckSymbolExists.cxx.o -c /home/kento/Documents/Jetson-Inference-Tutorials/imagenet-example-2/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
+/home/kento/Documents/Jetson-Inference-Tutorials/imagenet-example-2/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx: In function ‘int main(int, char**)’:
+/home/kento/Documents/Jetson-Inference-Tutorials/imagenet-example-2/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:19: error: ‘Q_WS_WIN’ was not declared in this scope
+   return ((int*)(&Q_WS_WIN))[argc];
+                   ^~~~~~~~
+/home/kento/Documents/Jetson-Inference-Tutorials/imagenet-example-2/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:19: note: suggested alternative: ‘Q_WS_X11’
+   return ((int*)(&Q_WS_WIN))[argc];
+                   ^~~~~~~~
+                   Q_WS_X11
+CMakeFiles/cmTC_76172.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_76172.dir/CheckSymbolExists.cxx.o' failed
+make[1]: *** [CMakeFiles/cmTC_76172.dir/CheckSymbolExists.cxx.o] Error 1
+make[1]: Leaving directory '/home/kento/Documents/Jetson-Inference-Tutorials/imagenet-example-2/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_76172/fast' failed
+make: *** [cmTC_76172/fast] Error 2
+
+File /home/kento/Documents/Jetson-Inference-Tutorials/imagenet-example-2/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
+/* */
+#include <QtCore/qglobal.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef Q_WS_WIN
+  return ((int*)(&Q_WS_WIN))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the Q_WS_QWS exist failed with the following output:
+Change Dir: /home/kento/Documents/Jetson-Inference-Tutorials/imagenet-example-2/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_c6320/fast"
+/usr/bin/make -f CMakeFiles/cmTC_c6320.dir/build.make CMakeFiles/cmTC_c6320.dir/build
+make[1]: Entering directory '/home/kento/Documents/Jetson-Inference-Tutorials/imagenet-example-2/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_c6320.dir/CheckSymbolExists.cxx.o
+/usr/bin/c++   -I/usr/include/qt4   -o CMakeFiles/cmTC_c6320.dir/CheckSymbolExists.cxx.o -c /home/kento/Documents/Jetson-Inference-Tutorials/imagenet-example-2/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
+/home/kento/Documents/Jetson-Inference-Tutorials/imagenet-example-2/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx: In function ‘int main(int, char**)’:
+/home/kento/Documents/Jetson-Inference-Tutorials/imagenet-example-2/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:19: error: ‘Q_WS_QWS’ was not declared in this scope
+   return ((int*)(&Q_WS_QWS))[argc];
+                   ^~~~~~~~
+/home/kento/Documents/Jetson-Inference-Tutorials/imagenet-example-2/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:19: note: suggested alternative: ‘Q_WS_X11’
+   return ((int*)(&Q_WS_QWS))[argc];
+                   ^~~~~~~~
+                   Q_WS_X11
+CMakeFiles/cmTC_c6320.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_c6320.dir/CheckSymbolExists.cxx.o' failed
+make[1]: *** [CMakeFiles/cmTC_c6320.dir/CheckSymbolExists.cxx.o] Error 1
+make[1]: Leaving directory '/home/kento/Documents/Jetson-Inference-Tutorials/imagenet-example-2/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_c6320/fast' failed
+make: *** [cmTC_c6320/fast] Error 2
+
+File /home/kento/Documents/Jetson-Inference-Tutorials/imagenet-example-2/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
+/* */
+#include <QtCore/qglobal.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef Q_WS_QWS
+  return ((int*)(&Q_WS_QWS))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the Q_WS_MAC exist failed with the following output:
+Change Dir: /home/kento/Documents/Jetson-Inference-Tutorials/imagenet-example-2/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_8f931/fast"
+/usr/bin/make -f CMakeFiles/cmTC_8f931.dir/build.make CMakeFiles/cmTC_8f931.dir/build
+make[1]: Entering directory '/home/kento/Documents/Jetson-Inference-Tutorials/imagenet-example-2/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_8f931.dir/CheckSymbolExists.cxx.o
+/usr/bin/c++   -I/usr/include/qt4   -o CMakeFiles/cmTC_8f931.dir/CheckSymbolExists.cxx.o -c /home/kento/Documents/Jetson-Inference-Tutorials/imagenet-example-2/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
+/home/kento/Documents/Jetson-Inference-Tutorials/imagenet-example-2/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx: In function ‘int main(int, char**)’:
+/home/kento/Documents/Jetson-Inference-Tutorials/imagenet-example-2/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:19: error: ‘Q_WS_MAC’ was not declared in this scope
+   return ((int*)(&Q_WS_MAC))[argc];
+                   ^~~~~~~~
+/home/kento/Documents/Jetson-Inference-Tutorials/imagenet-example-2/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:19: note: suggested alternative: ‘Q_WS_X11’
+   return ((int*)(&Q_WS_MAC))[argc];
+                   ^~~~~~~~
+                   Q_WS_X11
+CMakeFiles/cmTC_8f931.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_8f931.dir/CheckSymbolExists.cxx.o' failed
+make[1]: *** [CMakeFiles/cmTC_8f931.dir/CheckSymbolExists.cxx.o] Error 1
+make[1]: Leaving directory '/home/kento/Documents/Jetson-Inference-Tutorials/imagenet-example-2/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_8f931/fast' failed
+make: *** [cmTC_8f931/fast] Error 2
+
+File /home/kento/Documents/Jetson-Inference-Tutorials/imagenet-example-2/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
+/* */
+#include <QtCore/qglobal.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef Q_WS_MAC
+  return ((int*)(&Q_WS_MAC))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+

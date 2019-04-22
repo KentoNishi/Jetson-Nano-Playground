@@ -1,0 +1,14 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/kento/Documents/Jetson-Inference-Tutorials/imagenet-example-2/my-recognition.cpp
+jetson-inference/imageNet.h
+-
+jetson-utils/loadImage.h
+-
+
